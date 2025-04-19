@@ -1,5 +1,5 @@
 # jenkins-101
-Tutorial for jenkins
+Tutorial for jenkins, with some changes as it was make in 2022
 
 ## YouTube Link
 For the full 1 hour course watch on youtube:
