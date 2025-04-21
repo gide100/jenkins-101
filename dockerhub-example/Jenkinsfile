@@ -34,12 +34,16 @@ pipeline {
     }
     stage('Push') {
       steps {
+        unset DOCKER_TLS_VERIFY
+        unset DOCKER_CERT_PATH
         sh 'docker push gide100/gn-alpine:latest'
       }
     }
   }
   post {
     always {
+      unset DOCKER_TLS_VERIFY
+      unset DOCKER_CERT_PATH
       sh 'docker logout'
     }
   }
