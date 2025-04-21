@@ -11,6 +11,11 @@ pipeline {
     DOCKER_CERT_PATH = ''
   }
   stages {
+    stage('Test Docker Access') {
+      steps {
+        sh 'docker version'
+      }
+    }
     stage('Build') {
       steps {
         sh 'docker build -t gide100/gn-alpine:latest .'
