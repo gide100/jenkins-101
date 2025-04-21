@@ -6,9 +6,9 @@ pipeline {
   }
   environment {
     DOCKERHUB_CREDENTIALS = credentials('gide100-dockerhub')
-    DOCKER_HOST='unix:///var/run/docker.sock'
-    DOCKER_TLS_VERIFY = ''
-    DOCKER_CERT_PATH = ''
+//    DOCKER_HOST='unix:///var/run/docker.sock'
+//    DOCKER_TLS_VERIFY = ''
+//    DOCKER_CERT_PATH = ''
   }
   stages {
     stage('Test Docker Access') {
