@@ -13,11 +13,15 @@ pipeline {
   stages {
     stage('Test Docker Access') {
       steps {
+        unset DOCKER_TLS_VERIFY
+        unset DOCKER_CERT_PATH
         sh 'docker version'
       }
     }
     stage('Build') {
       steps {
+        unset DOCKER_TLS_VERIFY
+        unset DOCKER_CERT_PATH
         sh 'docker build -t gide100/gn-alpine:latest .'
       }
     }
